@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<!-- Entête -->
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="w3.css" />
+		<title>Commandes Réseaux sous Windows</title>
+	</head>
+	<!-- Corps -->
+	<body class="w3-container">
+		<h1 class="w3-panel w3-teal w3-center w3-border">Commandes Réseaux sous Windows</h1>
+		
+		<div class="w3-container w3-card-4 w3-center">
+		<img src="logo1.png" class="w3-hover-grayscale" alt="Niepce" style="width:20%;cursor:zoom-in"
+		onclick="document.getElementById('modal01').style.display='block'">
+			<div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+				<span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+				<div class="w3-modal-content w3-animate-zoom">
+					<img src="logo1.png" style="width:100%">
+				</div>
+			</div>
+		<img src="logo2.png" class="w3-hover-grayscale" alt="Balleure" style="width:20%;cursor:zoom-in"
+		onclick="document.getElementById('modal02').style.display='block'">
+			<div id="modal02" class="w3-modal" onclick="this.style.display='none'">
+				<span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+				<div class="w3-modal-content w3-animate-zoom">
+					<img src="logo2.png" style="width:100%">
+				</div>
+			</div>
+		</div>
+		<h2 class="w3-panel w3-green w3-card-4">IPCONFIG</h2>
+		<p class="w3-container">Affiche l'adresse IP, le masque de sous-réseau et la passerelle par défaut de chaque carte liée à TCP/IP.</p>
+		<table class="w3-table-all w3-card-4">
+			<tr>
+				<th class="option">OPTION</th><th>UTILISATION</th><th class="exemple">EXEMPLE</th>
+			</tr><tr class="w3-hover-teal">
+				<td>/?</td><td>Affiche un message d'aide</td><td>ipconfig /?</td>
+			</tr><tr class="w3-hover-teal">
+				<td>/all</td><td>Affiche toutes les informations de configuration</td><td>ipconfig /all</td>
+			</tr><tr class="w3-hover-teal">
+				<td>/release</td><td>Libère l'adresse IPv4 pour la carte spécifiée</td><td>ipconfig /release</td>
+			</tr><tr class="w3-hover-teal">
+				<td>/release6</td><td>Libère l'adresse IPv6 pour la carte spécifiée</td><td>ipconfig /release6</td>
+			</tr><tr class="w3-hover-teal">
+				<td>/renew</td><td>Renouvelle l'adresse IPv4 pour la carte spécifiée</td><td>ipconfig /renew</td>
+			</tr><tr class="w3-hover-teal">
+				<td>/renew6</td><td>Renouvelle l'adresse IPv6 pour la carte spécifiée</td><td>ipconfig /renew6</td>
+			</tr><tr class="w3-hover-teal">
+				<td>/displaydns</td><td>Affiche le contenu du cache de résolution DNS</td><td>ipconfig /displaydns</td>
+			</tr><tr class="w3-hover-teal">
+				<td>/flushdns</td><td>Vide le cache de résolution DNS</td><td>ipconfig /flushdns</td>
+			</tr>
+		</table>	
+		
+		<h2 class="w3-panel w3-green w3-card-4">PING</h2>
+		<p class="w3-container">Teste la connectivité avec un hôte (nom DNS ou adresse IP).</p>
+		<table class="w3-table-all w3-card-4">
+			<tr>
+				<th class="option">OPTION</th><th>UTILISATION</th><th class="exemple">EXEMPLE</th>
+			</tr><tr class="w3-hover-teal">
+				<td>-t</td><td>Effectue un test ping sur l'hôte spécifié jusqu'à son arrêt. Pour arrêter, appuyez sur Ctrl+C.</td><td>ping -t 10.0.0.1</td>
+			</tr><tr class="w3-hover-teal">
+				<td>-n count</td><td>Nombre de demandes d'écho à envoyer</td><td>ping -n 5 10.0.0.1</td>
+			</tr><tr class="w3-hover-teal">
+				<td>-l size</td><td>Taille du tampon d'envoi</td><td>ping -l 100 10.0.0.1</td>
+			</tr><tr class="w3-hover-teal">
+				<td>-i TTL</td><td>Durée de vie</td><td>ping -i 25 10.0.0.1</td>
+			</tr><tr class="w3-hover-teal">	
+				<td>-w timeout</td><td>Délai d'attente pour chaque réponse, en millisecondes</td><td>ping -w 2000 10.0.0.1</td>
+			</tr><tr class="w3-hover-teal">	
+				<td>-4</td><td>Force l'utilisation d'IPv4</td><td>ping -4 www.google.fr</td>
+			</tr><tr class="w3-hover-teal">	
+				<td>-6</td><td>Force l'utilisation d'IPv6</td><td>ping -6 www.google.fr</td>
+			</tr>
+		</table>
+		
+		<h2 class="w3-panel w3-green w3-card-4">TRACERT</h2>
+		<p class="w3-container">Définit le chemin vers un hôte (nom DNS ou adresse IP).</p>
+		<table class="w3-table-all w3-card-4">
+			<tr>
+				<th class="option">OPTION</th><th>UTILISATION</th><th class="exemple">EXEMPLE</th>
+			</tr><tr class="w3-hover-teal">
+				<td>-h SautsMaxi</td><td>Nombre maximum de sauts pour rechercher la cible</td><td>tracert -h 10 8.8.8.8</td>
+			</tr><tr class="w3-hover-teal">
+				<td>-4</td><td>Force l'utilisation d'IPv4</td><td>tracert -4 www.google.fr</td>
+			</tr><tr class="w3-hover-teal">	
+				<td>-6</td><td>Force l'utilisation d'IPv6</td><td>tracert -6 www.google.fr</td>
+			</tr>
+		</table>
+		
+		<h2 class="w3-panel w3-green w3-card-4">ROUTE</h2>
+		<p class="w3-container">Gère les tables de routage réseau.</p>
+		<table class="w3-table-all w3-card-4">
+			<tr>
+				<th class="option">OPTION</th><th>UTILISATION</th><th class="exemple">EXEMPLE</th>
+			</tr><tr class="w3-hover-teal">
+				<td>print</td><td>Affiche la table de routage de l'hôte</td><td>route print</td>
+			</tr><tr class="w3-hover-teal">
+				<td>add</td><td>Ajoute une route dans la table de routage</td><td>route add 10.0.0.0 MASK 255.0.0.0 10.0.0.255</td>
+			</tr><tr class="w3-hover-teal">	
+				<td>delete</td><td>Supprime une route dans la table de routage</td><td>route delete 10.0.0.0</td>
+			</tr><tr class="w3-hover-teal">	
+				<td>change</td><td>change la passerelle d'une route dans la table de routage</td><td>route change 10.0.0.0 MASK 255.0.0.0 10.255.255.255</td>
+			</tr>
+		</table>
+		
+		<h2 class="w3-panel w3-green w3-card-4">ARP</h2>
+		<p class="w3-container">Affiche et modifie les tables de traduction d'adresses IP en adresses physiques utilisées par le protocole de résolution d'adresses ARP.</p>
+		<table class="w3-table-all w3-card-4">
+			<tr>
+				<th class="option">OPTION</th><th>UTILISATION</th><th class="exemple">EXEMPLE</th>
+			</tr><tr class="w3-hover-teal">
+				<td>-a</td><td>Affiche les entrées ARP en cours</td><td>arp -a</td>
+			</tr><tr class="w3-hover-teal">
+				<td>-d</td><td>Supprime l'hôte spécifié par adresse IP. Le caractère générique * permet de supprimer tous les hôtes</td><td>arp -d 10.0.0.1</td>
+			</tr><tr class="w3-hover-teal">	
+				<td>-s</td><td>Ajoute l'hôte et associe l'adresse IP avec l'adresse MAC. L'entrée est permanente</td><td>arp -s 10.0.0.1 <br />00-aa-00-62-c6-09</td>
+			</tr>
+		</table>
+		
+		<h2 class="w3-panel w3-green w3-card-4">DIVERS</h2>
+		<table class="w3-table-all w3-card-4">
+			<tr>
+				<th class="option">NOM</th><th>UTILISATION</th><th class="exemple">EXEMPLE</th>
+			</tr><tr class="w3-hover-teal">
+				<td>HOSTNAME</td><td>Affiche le nom de l'hôte actuel</td><td>hostname</td>
+			</tr><tr class="w3-hover-teal">
+				<td>GETMAC</td><td>Donne les adresses MAC de toutes les interfaces réseaux</td><td>getmac -v</td>
+			</tr><tr class="w3-hover-teal">	
+				<td>TELNET</td><td>Permet la connexion à distance sur un hôte</td><td>telnet 192.168.0.254</td>
+			</tr><tr class="w3-hover-teal">	
+				<td>FTP</td><td>Transfère des fichiers vers et depuis un ordinateur</td><td>ftp ftp.microsoft.com</td>
+			</tr><tr class="w3-hover-teal">	
+				<td>NSLOOKUP</td><td>Recherche l'hôte en utilisant la résolution DNS</td><td>nslookup www.google.fr</td>
+			</tr>
+		</table>
+	</body>
+</html>
